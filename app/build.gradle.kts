@@ -63,7 +63,7 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.kotlin.extensions.library)
-    implementation(project(":composeextensions"))
+    implementation(libs.compose.extensions.library)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
