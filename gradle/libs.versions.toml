@@ -1,12 +1,15 @@
 [versions]
-agp = "8.12.0"
-kotlin = "2.2.10"
+agp = "9.0.0"
+kotlin = "2.3.0"
 coreKtx = "1.17.0"
 
-activityCompose = "1.12.0-alpha06"
-composeBom = "2025.08.00"
+activityCompose = "1.12.2"
+composeBom = "2026.01.00"
 
-androidx-lifecycle-compose = "2.9.2"
+androidx-lifecycle-compose = "2.10.0"
+
+# Dokka for documentation
+dokka = "2.2.0-Beta"
 
 
 junit = "4.13.2"
@@ -14,7 +17,7 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 
 # ForteanJo libraries
-extensions-library = "1.0.0"
+extensions-library = "1.0.2"
 compose-extensions = "1.0.0"
 
 
@@ -73,6 +76,8 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+jetbrains-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 
 [bundles]
 androidx-lifecycle = [

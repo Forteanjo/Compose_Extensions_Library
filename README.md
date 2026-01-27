@@ -1,8 +1,8 @@
 # Kotlin Extensions
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-blue.svg)](https://kotlinlang.org/)
-[![Compose](https://img.shields.io/badge/ComposeBom-2025.08.00-blue.svg)](https://developer.android.com/jetpack/compose)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.3.0-blue.svg)](https://kotlinlang.org/)
+[![Compose](https://img.shields.io/badge/ComposeBom-2026.01.00-blue.svg)](https://developer.android.com/jetpack/compose)
 [![API](https://img.shields.io/badge/API-27%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=26)
 
 [![Build Status](https://github.com/forteanjo/Compose_Extensions_Library/actions/workflows/android.yml/badge.svg)](https://github.com/forteanjo/Compose_Extensions_Library/actions/workflows/android.yml)
