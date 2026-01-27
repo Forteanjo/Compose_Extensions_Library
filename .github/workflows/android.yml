@@ -1,4 +1,4 @@
-name: Android CI - Extensions Module
+name: Android CI - Compose Extensions Module
 
 on:
   push:
