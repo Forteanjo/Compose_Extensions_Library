@@ -64,7 +64,7 @@ dependencies {
 // This is used to publish the documentation along with the library.
 tasks.register<Jar>("javadocJar") {
     dependsOn(tasks.named("dokkaHtml"))
-    from(tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaHtml").flatMap { it.outputDirectory })
+    from(tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaGenerateHtml").flatMap { it.outputDirectory })
     archiveClassifier.set("javadoc")
 }
 
