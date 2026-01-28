@@ -93,7 +93,7 @@ publishing {
 
             pom {
                 name.set(project.name) // Or a custom name
-                description.set("Useful Jetpack compose extensions for Android development.") // Example description
+                description.set("Useful Jetpack compose extensions and modifiers for Android development.") // Example description
                 url.set("https://github.com/Forteanjo/Compose_Extensions_Library") // Example URL
 
                 licenses {
