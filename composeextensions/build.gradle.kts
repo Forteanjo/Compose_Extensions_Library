@@ -1,3 +1,5 @@
+import org.jetbrains.dokka.gradle.tasks.DokkaGenerateTask
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
@@ -63,8 +65,11 @@ dependencies {
 // Creates a JAR file from the output of the dokkaHtml task.
 // This is used to publish the documentation along with the library.
 tasks.register<Jar>("javadocJar") {
-    dependsOn(tasks.named("dokkaHtml"))
-    from(tasks.named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaGenerateHtml").flatMap { it.outputDirectory })
+    val dokkaHtml = tasks.named<DokkaGenerateTask>("dokkaGenerateHtml")
+
+    dependsOn(dokkaHtml)
+
+    from(dokkaHtml.flatMap { it.outputDirectory })
     archiveClassifier.set("javadoc")
 }
 
