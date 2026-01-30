@@ -47,14 +47,3 @@ jobs:
       # Optional: Assemble Release for Extensions Module
       - name: Assemble Release
         run: ./gradlew :composeextensions:assembleRelease
-
-      # Optional: Publish artifacts
-      # - name: Publish to Maven Local
-      #   run: ./gradlew :extensions:publishReleasePublicationToMavenLocal
-
-      # Optional: Upload build artifacts
-      # - name: Upload APK
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: extensions-release
-      #     path: extensions/build/outputs/aar/*.aar
