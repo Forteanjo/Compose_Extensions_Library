@@ -191,6 +191,15 @@ fun Modifier.innerShadow(
     }
 }
 
+/**
+ * Applies a fade effect over the content, drawing a gradient from an initial color to a final color.
+ * This can be used to create effects like text fading into the background.
+ *
+ * @param initialColor The color at the start of the gradient. Defaults to [Color.Transparent].
+ * @param fadeToColor The color at the end of the gradient. Defaults to [Color.White].
+ * @param verticalFade If true, the gradient will be vertical (top to bottom). If false, it will be horizontal (left to right). Defaults to true.
+ * @return A [Modifier] that draws a gradient over the content.
+ */
 fun Modifier.fadeOut(
     initialColor: Color = Color.Transparent,
     fadeToColor: Color = Color.White,
@@ -203,6 +212,21 @@ fun Modifier.fadeOut(
         )
     }
 
+/**
+ * Applies a glowing effect around the composable.
+ *
+ * This modifier draws a shadow layer behind the composable, creating a "glow" effect.
+ * The shape of the glow will match the rounded rectangle shape of the composable.
+ *
+ * @param glowingColor The color of the glow.
+ * @param containerColor The color of the container itself. This is drawn to provide a surface for the shadow to appear behind. Defaults to [Color.White].
+ * @param cornerRadius The corner radius for the rounded rectangle shape of both the container and the glow. Defaults to 0.dp for a sharp-cornered rectangle.
+ * @param glowingRadius The blur radius of the glow. A larger value will create a more spread-out and softer glow. Defaults to 20.dp.
+ * @param glowAlpha The alpha transparency of the glow. Defaults to 0.8f.
+ * @param offsetX The horizontal offset of the glow. A positive value shifts the glow to the right, a negative value to the left. Defaults to 0.dp.
+ * @param offsetY The vertical offset of the glow. A positive value shifts the glow downwards, a negative value upwards. Defaults to 0.dp.
+ * @return A [Modifier] that applies the glow effect.
+ */
 fun Modifier.glow(
     glowingColor: Color,
     containerColor: Color = Color.White,
@@ -232,6 +256,21 @@ fun Modifier.glow(
     }
 
 
+/**
+ * Creates a parallax effect on a composable as the user scrolls.
+ * The composable's vertical position is adjusted based on the `scrollState`.
+ *
+ * This modifier is useful for creating depth in a scrollable layout, where some elements
+ * (like a background image) move at a different speed than the foreground content.
+ *
+ * @param scrollState The [ScrollState] of the scrollable container. The parallax effect
+ *                    is driven by changes in this state's value.
+ * @param rate A factor to control the speed of the parallax effect. A higher rate results
+ *             in a slower movement of the composable. A rate of 0 will cause the composable
+ *             to move at the same speed as the scroll, while a negative rate is not recommended.
+ *             The vertical offset is calculated as `scrollState.value / rate`.
+ * @return A [Modifier] that applies the parallax layout behavior.
+ */
 fun Modifier.parallaxLayout(scrollState: ScrollState, rate: Int) =
     layout { measurable, constraints ->
         val placeable = measurable.measure(constraints = constraints)
@@ -247,6 +286,14 @@ fun Modifier.parallaxLayout(scrollState: ScrollState, rate: Int) =
 
     }
 
+/**
+ * Applies a shimmering effect to the composable. This is often used to indicate a loading state.
+ * The shimmer is a linear gradient that animates across the composable.
+ *
+ * This overload uses a predefined set of grey colors for the shimmer effect.
+ *
+ * @return A [Modifier] that adds the shimmer effect.
+ */
 fun Modifier.shimmerEffect(): Modifier = composed {
     var size by remember {
         mutableStateOf(IntSize.Zero)
@@ -279,6 +326,27 @@ fun Modifier.shimmerEffect(): Modifier = composed {
         }
 }
 
+/**
+ * Applies a shimmering effect to a composable, typically used for loading placeholders.
+ *
+ * This modifier creates a shimmering animation by applying a linear gradient that moves across the composable.
+ * The animation is an infinite loop, giving the appearance of a continuous shimmer.
+ *
+ * The gradient consists of three colors by default (`0xFFB8B5B5`, `0xFF6D6868`, `0xFFB8B5B5`)
+ * to create a highlight effect that sweeps across the component.
+ *
+ * @return A [Modifier] that applies the shimmer effect.
+ *
+ * @sample
+ * ```
+ * Box(
+ *     modifier = Modifier
+ *         .size(100.dp, 20.dp)
+ *         .clip(RoundedCornerShape(4.dp))
+ *         .shimmerEffect()
+ * )
+ * ```
+ */
 fun Modifier.shimmerEffect(
     baseColor: Color = Color.LightGray
 ): Modifier = composed {
