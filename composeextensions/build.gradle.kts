@@ -65,9 +65,9 @@ dependencies {
 // Creates a JAR file from the output of the dokkaHtml task.
 // This is used to publish the documentation along with the library.
 tasks.register<Jar>("javadocJar") {
-    dependsOn(tasks.named("dokkaHtml"))
+    dependsOn(tasks.named("dokkaGenerateHtml"))
     archiveClassifier.set("javadoc")
-    from(tasks.named("dokkaHtml").map { it.outputs.files })
+    from(tasks.named("dokkaGenerateHtml").map { it.outputs.files })
 }
 
 publishing {
