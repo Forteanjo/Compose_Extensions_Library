@@ -38,6 +38,10 @@ An Jetpack Compose extensions library for use in Kotlin Android projects.
 
 ## Project Structure (Key Components)
 
+Dokka HTML Documentation:
+
+[Compose Extensions](https://forteanjo.github.io/Compose_Extensions_Library/index.html)
+
 ## Acknowledgements
 
 
