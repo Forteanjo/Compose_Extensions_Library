@@ -1,15 +1,15 @@
 [versions]
-agp = "9.0.0"
-kotlin = "2.3.0"
-coreKtx = "1.17.0"
+agp = "9.3.3"
+kotlin = "2.4.20"
+coreKtx = "1.19.0"
 
-activityCompose = "1.12.3"
-composeBom = "2026.01.01"
+activityCompose = "1.13.0"
+composeBom = "2026.09.00"
 
-androidx-lifecycle-compose = "2.10.0"
+androidx-lifecycle-compose = "2.11.0"
 
 # Dokka for documentation
-dokka = "2.2.0-Beta"
+dokka = "2.2.0"
 
 
 junit = "4.13.2"
@@ -17,14 +17,14 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 
 # ForteanJo libraries
-extensions-library = "1.0.2"
-compose-extensions = "1.0.0"
+extensions-library = "1.0.8"
+compose-extensions = "1.0.1"
 
 
 # Android SDK settings
-android-compileSdk = "36"
+android-compileSdk = "37"
 android-minSdk = "27"
-android-targetSdk = "36"
+android-targetSdk = "37"
 android-buildtools = "36.0.0"
 
 app-versionCode = "1"
