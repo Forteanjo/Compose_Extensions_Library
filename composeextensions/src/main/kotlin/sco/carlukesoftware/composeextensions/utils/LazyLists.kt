@@ -3,19 +3,36 @@ package sco.carlukesoftware.composeextensions.utils
 import androidx.compose.foundation.lazy.LazyListState
 
 /**
- * Checks if the LazyList is scrolled to the end.
+ * Checks if the first item in the lazy list is visible at index 0 and fully aligned at the top (scroll offset 0).
  *
- * @return `true` if the last visible item is the last item in the list, `false` otherwise.
+ * **Performance Note:** When reading this property inside a Composable, wrap it in [androidx.compose.runtime.derivedStateOf]
+ * to prevent recomposition on every pixel scrolled:
+ * ```
+ * val isAtTop by remember { derivedStateOf { listState.isAtTop } }
+ * ```
  */
-fun LazyListState.isScrolledToEnd(): Boolean =
-    layoutInfo.visibleItemsInfo.lastOrNull()?.index == layoutInfo.totalItemsCount - 1
+val LazyListState.isAtTop: Boolean
+    get() = firstVisibleItemIndex == 0 && firstVisibleItemScrollOffset == 0
 
 /**
- * Checks if the lazy list is scrolled to the top.
+ * Checks if the last item in the lazy list is currently visible in the viewport (at least partially).
  *
- * @return True if the first visible item is the first item in the list (index 0)
- *         and its scroll offset is 0, indicating it's fully visible at the top.
- *         False otherwise.
+ * Useful as a trigger for pagination or auto-loading more data.
+ *
+ * **Note:** This returns `true` as soon as any part of the last item becomes visible. If you need to check
+ * if the list cannot be scrolled forward any further, use `!canScrollForward` instead.
  */
-fun LazyListState.isAtTop(): Boolean =
-    firstVisibleItemIndex == 0 && firstVisibleItemScrollOffset == 0
+val LazyListState.isLastItemVisible: Boolean
+    get() {
+        val totalItems = layoutInfo.totalItemsCount
+        if (totalItems == 0) return false
+        return layoutInfo.visibleItemsInfo.lastOrNull()?.index == totalItems - 1
+    }
+
+/**
+ * Checks if the lazy list is scrolled completely to the end (no remaining forward scroll distance).
+ *
+ * Uses Compose's built-in [LazyListState.canScrollForward] property.
+ */
+val LazyListState.isScrolledToEnd: Boolean
+    get() = !canScrollForward

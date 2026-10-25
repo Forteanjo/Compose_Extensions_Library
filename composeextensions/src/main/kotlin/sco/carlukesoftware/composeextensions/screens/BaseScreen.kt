@@ -17,6 +17,9 @@ import sco.carlukesoftware.composeextensions.lifecycle.ListenToComposableLifecyc
  * They can also override the lifecycle methods to perform specific actions at different stages
  * of the screen's lifecycle.
  */
+@Deprecated(
+    message = "BaseScreen class is deprecated. Use ComposeScreen instead."
+)
 abstract class BaseScreen {
 
     /**

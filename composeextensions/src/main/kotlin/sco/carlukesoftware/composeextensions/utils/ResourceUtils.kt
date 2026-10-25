@@ -16,7 +16,7 @@ object ResourceUtils {
      * Reads the text content of a resource file.
      *
      * This function locates a resource file by its name, reads its entire content as a String,
-     * and normalizes line endings to '\n'.
+     * and normalises line endings to '\n'.
      *
      * @param name The name of the resource file (e.g., "my_text_file.txt").
      *             The resource is expected to be found in the classpath.

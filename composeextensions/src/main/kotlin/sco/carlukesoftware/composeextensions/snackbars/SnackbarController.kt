@@ -1,51 +1,76 @@
 package sco.carlukesoftware.composeextensions.snackbars
 
+import androidx.compose.material3.SnackbarDuration
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.channels.ChannelResult
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.receiveAsFlow
+import sco.carlukesoftware.composeextensions.snackbars.data.SnackbarAction
 import sco.carlukesoftware.composeextensions.snackbars.data.SnackbarEvent
 
 /**
  * A controller for managing snackbar events.
  *
- * This object provides a centralized way to send and receive snackbar events,
- * allowing different parts of the application to trigger snackbar notifications.
+ * Provides a centralized way to send and receive snackbar events across different
+ * parts of the application.
  *
- * Snackbars are displayed using a [SnackbarHostState] which should collect the [events] flow.
+ * Note: [events] uses a single-consumer channel flow. Ensure only one `SnackbarHost`
+ * collects events at the root of your UI hierarchy.
  *
  * Example usage:
  * ```kotlin
- * // In your Composable
+ * // In your root Composable (e.g., inside a Scaffold)
  * val snackbarHostState = remember { SnackbarHostState() }
- * LaunchedEffect(Unit) {
- *     SnackbarController.events.collect { event ->
- *         snackbarHostState.showSnackbar(
- *             message = event.message,
- *             actionLabel = event.actionLabel,
- *             duration = event.duration
- *         )
+
+ * SnackbarController.events.ObserveAsEvents { event ->
+ *     val result = snackbarHostState.showSnackbar(
+ *         message = event.message,
+ *         actionLabel = event.action?.name,
+ *         duration = event.duration
+ *     )
+ *     if (result == SnackbarResult.ActionPerformed) {
+ *         event.action?.action?.invoke()
  *     }
  * }
  *
- * // To show a snackbar from anywhere
- * CoroutineScope(Dispatchers.Main).launch {
- *     SnackbarController.sendEvent(
- *         SnackbarEvent(message = "Hello Snackbar!")
- *     )
+ * // Triggering a snackbar from a ViewModel or CoroutineScope
+ * viewModelScope.launch {
+ *     SnackbarController.sendEvent("Item saved successfully")
  * }
  * ```
  */
 object SnackbarController {
 
-    private val _events = Channel<SnackbarEvent>()
-    val events = _events.receiveAsFlow()
+    private val _events = Channel<SnackbarEvent>(capacity = Channel.BUFFERED)
+    val events: Flow<SnackbarEvent> = _events.receiveAsFlow()
 
     /**
      * Sends a [SnackbarEvent] to be displayed.
-     * This function is suspending and should be called from a coroutine.
      *
      * @param event The [SnackbarEvent] to send.
      */
     suspend fun sendEvent(event: SnackbarEvent) {
-        _events.send(element = event)
+        _events.send(event)
+    }
+
+    /**
+     * Convenience function to send a [SnackbarEvent] without constructing a data class instance.
+     */
+    suspend fun sendEvent(
+        message: String,
+        action: SnackbarAction? = null,
+        duration: SnackbarDuration = SnackbarDuration.Long
+    ) {
+        sendEvent(SnackbarEvent(message, action, duration))
+    }
+
+    /**
+     * Attempts to send a [SnackbarEvent] synchronously without suspending.
+     *
+     * @param event The [SnackbarEvent] to send.
+     * @return A [ChannelResult] indicating whether the event was successfully sent.
+     */
+    fun trySendEvent(event: SnackbarEvent): ChannelResult<Unit> {
+        return _events.trySend(event)
     }
 }

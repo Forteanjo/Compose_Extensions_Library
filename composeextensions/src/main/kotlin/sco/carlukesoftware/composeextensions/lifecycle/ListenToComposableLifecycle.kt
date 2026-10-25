@@ -2,10 +2,12 @@ package sco.carlukesoftware.composeextensions.lifecycle
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.compose.LocalLifecycleOwner
 
 /**
  * Observes the lifecycle of a Composable function.
@@ -35,20 +37,44 @@ import androidx.lifecycle.LifecycleOwner
  *         Lifecycle.Event.ON_STOP -> {
  *             // Composable has stopped
  *         }
+ *     }
+ * }
+ * ```
  */
 @Composable
 fun ListenToComposableLifecycle(
     lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current,
-    onEvent: (LifecycleOwner, Lifecycle.Event) -> Unit
+    onEvent: (source: LifecycleOwner, event: Lifecycle.Event) -> Unit,
 ) {
+    // Retain a reference to the latest onEvent lambda across recompositions
+    // to prevent invoking a stale callback instance.
+    val currentOnEvent by rememberUpdatedState(onEvent)
+
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { source, event ->
-            onEvent(source, event)
+            currentOnEvent(source, event)
         }
 
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose {
             lifecycleOwner.lifecycle.removeObserver(observer)
         }
+    }
+}
+
+/**
+ * Observes the lifecycle events of a Composable function without needing the [LifecycleOwner] parameter.
+ *
+ * @param lifecycleOwner The [LifecycleOwner] whose lifecycle events are to be observed.
+ *                       Defaults to the [LocalLifecycleOwner] of the current composition.
+ * @param onEvent A lambda function that receives the [Lifecycle.Event] when it occurs.
+ */
+@Composable
+fun ListenToComposableLifecycle(
+    lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current,
+    onEvent: (event: Lifecycle.Event) -> Unit,
+) {
+    ListenToComposableLifecycle(lifecycleOwner = lifecycleOwner) { _, event ->
+        onEvent(event)
     }
 }

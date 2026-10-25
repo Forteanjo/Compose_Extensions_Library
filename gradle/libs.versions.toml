@@ -1,7 +1,7 @@
 [versions]
-agp = "9.3.3"
-kotlin = "2.4.20"
-coreKtx = "1.19.0"
+agp = "9.4.1"
+kotlin = "2.4.21"
+coreKtx = "1.19.1"
 
 activityCompose = "1.13.0"
 composeBom = "2026.09.00"
@@ -18,7 +18,7 @@ espressoCore = "3.7.0"
 
 # ForteanJo libraries
 extensions-library = "1.0.8"
-compose-extensions = "1.0.1"
+compose-extensions = "1.0.2"
 
 
 # Android SDK settings
@@ -28,7 +28,7 @@ android-targetSdk = "37"
 android-buildtools = "36.0.0"
 
 app-versionCode = "1"
-app-versionName = "1.0"
+app-versionName = "1.0.3"
 
 jvmTarget = "21"
 
