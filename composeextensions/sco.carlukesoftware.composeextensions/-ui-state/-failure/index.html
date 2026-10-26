@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Failure</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    composeextensions
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":composeextensions/release">release</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":composeextensions/release"
+                                       data-filter=":composeextensions/release"/>
+                                <span class="checkbox--icon"></span>
+                                release
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    composeextensions
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="composeextensions::sco.carlukesoftware.composeextensions/UiState.Failure///PointingToDeclaration//-1687418908">
+  <div class="breadcrumbs"><a href="../../../../index.html">composeextensions</a><span class="delimiter">/</span><a href="../../index.html">sco.carlukesoftware.composeextensions</a><span class="delimiter">/</span><a href="../index.html">UiState</a><span class="delimiter">/</span><span class="current">Failure</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Failure</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Failure</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span> : <a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-nothing/index.html">Nothing</a><span class="token operator">&gt; </span></div><p class="paragraph">Indicates an operation failure holding the thrown <span data-unresolved-link="sco.carlukesoftware.composeextensions/UiState.Failure//#kotlin.Throwable/PointingToCallableParameters(0)/">throwable</span>.</p><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>throwable</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The exception or error that occurred.</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="149408030%2FConstructors%2F-1687418908" anchor-label="Failure" id="149408030%2FConstructors%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-failure.html"><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="149408030%2FConstructors%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-664699241%2FProperties%2F-1687418908" anchor-label="isFailure" id="-664699241%2FProperties%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-failure.html"><span>is</span><wbr></wbr><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-664699241%2FProperties%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../is-failure.html">isFailure</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1501802437%2FProperties%2F-1687418908" anchor-label="isIdle" id="1501802437%2FProperties%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-idle.html"><span>is</span><wbr></wbr><span><span>Idle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1501802437%2FProperties%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../is-idle.html">isIdle</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1292141787%2FProperties%2F-1687418908" anchor-label="isLoading" id="-1292141787%2FProperties%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-loading.html"><span>is</span><wbr></wbr><span><span>Loading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1292141787%2FProperties%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../is-loading.html">isLoading</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="860650046%2FProperties%2F-1687418908" anchor-label="isSuccess" id="860650046%2FProperties%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-success.html"><span>is</span><wbr></wbr><span><span>Success</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="860650046%2FProperties%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../is-success.html">isSuccess</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-612261797%2FProperties%2F-1687418908" anchor-label="throwable" id="-612261797%2FProperties%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="throwable.html"><span><span>throwable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-612261797%2FProperties%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="throwable.html">throwable</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1995402957%2FFunctions%2F-1687418908" anchor-label="Content" id="1995402957%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../sco.carlukesoftware.composeextensions.utils/-content.html"><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1995402957%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/-content.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/-content.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../../sco.carlukesoftware.composeextensions.utils/-content.html"><span class="token function">Content</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>onSuccess<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a> </span><span class="token punctuation">(</span>data<span class="token operator">: </span><a href="../../../sco.carlukesoftware.composeextensions.utils/-content.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>onLoading<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a> </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>onIdle<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a> </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>onFailure<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a> </span><span class="token punctuation">(</span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Exhaustively renders UI content based on the current <a href="../index.html">UiState</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2138813463%2FFunctions%2F-1687418908" anchor-label="exceptionOrNull" id="-2138813463%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../exception-or-null.html"><span>exception</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2138813463%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../exception-or-null.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../exception-or-null.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../exception-or-null.html"><span class="token function">exceptionOrNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the encapsulated throwable if this state is <a href="index.html">UiState.Failure</a>, or <code class="lang-kotlin">null</code> otherwise.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1652039593%2FFunctions%2F-1687418908" anchor-label="flatMap" id="-1652039593%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../flat-map.html"><span>flat</span><wbr></wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1652039593%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../flat-map.html">T</a><span class="token punctuation">, </span><a href="../../flat-map.html">R</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../flat-map.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../flat-map.html"><span class="token function">flatMap</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../flat-map.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../flat-map.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../flat-map.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Transforms the <a href="../-success/index.html">UiState.Success</a> data using the given <a href="../../flat-map.html">transform</a> function that returns a new <a href="../index.html">UiState</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="50999697%2FFunctions%2F-1687418908" anchor-label="fold" id="50999697%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../fold.html"><span><span>fold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="50999697%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../fold.html">T</a><span class="token punctuation">, </span><a href="../../fold.html">R</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../fold.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../fold.html"><span class="token function">fold</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onSuccess<span class="token operator">: </span><span class="token punctuation">(</span>data<span class="token operator">: </span><a href="../../fold.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../fold.html">R</a><span class="token punctuation">, </span></span><span class="parameter ">onFailure<span class="token operator">: </span><span class="token punctuation">(</span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../fold.html">R</a><span class="token punctuation">, </span></span><span class="parameter ">onLoading<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../fold.html">R</a><span class="token punctuation">, </span></span><span class="parameter ">onIdle<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../fold.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../fold.html">R</a></div><div class="brief "><p class="paragraph">Applies <a href="../../fold.html">onSuccess</a> if state is <a href="../-success/index.html">UiState.Success</a>, <a href="../../fold.html">onFailure</a> if <a href="index.html">UiState.Failure</a>, <a href="../../fold.html">onLoading</a> if <a href="../-loading/index.html">UiState.Loading</a>, or <a href="../../fold.html">onIdle</a> if <a href="../-idle/index.html">UiState.Idle</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="66393426%2FFunctions%2F-1687418908" anchor-label="getOrDefault" id="66393426%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../get-or-default.html"><span>get</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Default</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="66393426%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../get-or-default.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../get-or-default.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../get-or-default.html"><span class="token function">getOrDefault</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="../../get-or-default.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../get-or-default.html">T</a></div><div class="brief "><p class="paragraph">Returns the encapsulated data if this state is <a href="../-success/index.html">UiState.Success</a>, or <a href="../../get-or-default.html">default</a> otherwise.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2027412234%2FFunctions%2F-1687418908" anchor-label="getOrElse" id="2027412234%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../get-or-else.html"><span>get</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Else</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2027412234%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../get-or-else.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../get-or-else.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../get-or-else.html"><span class="token function">getOrElse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onFailure<span class="token operator">: </span><span class="token punctuation">(</span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../get-or-else.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../get-or-else.html">T</a></div><div class="brief "><p class="paragraph">Returns the encapsulated data if this state is <a href="../-success/index.html">UiState.Success</a>, or the result of <a href="../../get-or-else.html">onFailure</a> function for non-success states.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="188624258%2FFunctions%2F-1687418908" anchor-label="getOrNull" id="188624258%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../get-or-null.html"><span>get</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="188624258%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../get-or-null.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../get-or-null.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../get-or-null.html"><span class="token function">getOrNull</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../get-or-null.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the encapsulated data if this state is <a href="../-success/index.html">UiState.Success</a>, or <code class="lang-kotlin">null</code> otherwise.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-606195865%2FFunctions%2F-1687418908" anchor-label="getOrThrow" id="-606195865%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../get-or-throw.html"><span>get</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-606195865%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../get-or-throw.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../get-or-throw.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../get-or-throw.html"><span class="token function">getOrThrow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../get-or-throw.html">T</a></div><div class="brief "><p class="paragraph">Returns the encapsulated data if this state is <a href="../-success/index.html">UiState.Success</a>, or throws the encapsulated <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a> if this state is <a href="index.html">UiState.Failure</a>, or an <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a> if <a href="../-idle/index.html">UiState.Idle</a> or <a href="../-loading/index.html">UiState.Loading</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1131723404%2FFunctions%2F-1687418908" anchor-label="map" id="1131723404%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../map.html"><span><span>map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1131723404%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../map.html">T</a><span class="token punctuation">, </span><a href="../../map.html">R</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../map.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../map.html"><span class="token function">map</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../map.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../map.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../map.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Transforms the <a href="../-success/index.html">UiState.Success</a> data using the given <a href="../../map.html">transform</a> function. Non-success states (<a href="../-idle/index.html">UiState.Idle</a>, <a href="../-loading/index.html">UiState.Loading</a>, <a href="index.html">UiState.Failure</a>) are passed through unchanged.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1948963196%2FFunctions%2F-1687418908" anchor-label="onFailure" id="-1948963196%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../sco.carlukesoftware.composeextensions.utils/on-failure.html"><span>on</span><wbr></wbr><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1948963196%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-failure.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-failure.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-failure.html"><span class="token function">onFailure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-failure.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Executes <a href="../../../sco.carlukesoftware.composeextensions.utils/on-failure.html">block</a> with <a href="throwable.html">UiState.Failure.throwable</a> if the <a href="../index.html">UiState</a> is <a href="index.html">UiState.Failure</a>. Returns <code class="lang-kotlin">this</code> to allow chaining.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1295130232%2FFunctions%2F-1687418908" anchor-label="onIdle" id="-1295130232%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../sco.carlukesoftware.composeextensions.utils/on-idle.html"><span>on</span><wbr></wbr><span><span>Idle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1295130232%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-idle.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-idle.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-idle.html"><span class="token function">onIdle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-idle.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Executes <a href="../../../sco.carlukesoftware.composeextensions.utils/on-idle.html">block</a> if the <a href="../index.html">UiState</a> is <a href="../-idle/index.html">UiState.Idle</a>. Returns <code class="lang-kotlin">this</code> to allow chaining.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1716941314%2FFunctions%2F-1687418908" anchor-label="onLoading" id="-1716941314%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../sco.carlukesoftware.composeextensions.utils/on-loading.html"><span>on</span><wbr></wbr><span><span>Loading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716941314%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-loading.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-loading.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-loading.html"><span class="token function">onLoading</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-loading.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Executes <a href="../../../sco.carlukesoftware.composeextensions.utils/on-loading.html">block</a> if the <a href="../index.html">UiState</a> is <a href="../-loading/index.html">UiState.Loading</a>. Returns <code class="lang-kotlin">this</code> to allow chaining.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1099856162%2FFunctions%2F-1687418908" anchor-label="onSuccess" id="-1099856162%2FFunctions%2F-1687418908" data-filterable-set=":composeextensions/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":composeextensions/release" data-filterable-set=":composeextensions/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html"><span>on</span><wbr></wbr><span><span>Success</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1099856162%2FFunctions%2F-1687418908"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":composeextensions/release"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html">T</a><span class="token operator">&gt; </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html"><span class="token function">onSuccess</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>data<span class="token operator">: </span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">UiState</a><span class="token operator">&lt;</span><a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Executes <a href="../../../sco.carlukesoftware.composeextensions.utils/on-success.html">block</a> with <a href="../-success/data.html">UiState.Success.data</a> if the <a href="../index.html">UiState</a> is <a href="../-success/index.html">UiState.Success</a>. Returns <code class="lang-kotlin">this</code> to allow chaining.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
