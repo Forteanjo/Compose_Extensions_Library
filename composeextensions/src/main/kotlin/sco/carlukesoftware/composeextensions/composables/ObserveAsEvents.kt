@@ -56,6 +56,7 @@ fun <T> ObserveAsEvents(
  * ```
  */
 @Composable
+@JvmName("ObserveAsEventsFromFlow")
 fun <T> Flow<T>.ObserveAsEvents(
     key1: Any? = null,
     key2: Any? = null,
