@@ -19,7 +19,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.drawWithCache
-import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.geometry.toRect
@@ -70,6 +69,7 @@ inline fun Modifier.iif(
  * @param offsetY The vertical offset of the shadow.
  * @param blurRadius The blur radius of the shadow.
  */
+@Deprecated("Use Modifier.shadow instead", ReplaceWith("this.shadow(color, offsetX, offsetY, blurRadius)"))
 fun Modifier.shadow(
     color: Color = Color.Black,
     offsetX: Dp = 0.dp,
@@ -134,6 +134,7 @@ fun Modifier.spreadShadow(
  *
  * Uses [drawWithCache] to cache the outline and paint objects across draw calls.
  */
+@Deprecated("Use Modifier.shadow instead", ReplaceWith("this.shadow(shape, color, blur, offsetY, offsetX, spread)"))
 fun Modifier.innerShadow(
     shape: Shape,
     color: Color = Color.Black,
