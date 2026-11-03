@@ -24,5 +24,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Compose Extensions Library"
-include(":app")
+if (System.getenv("JITPACK") != "true") {
+    include(":app")
+}
 include(":composeextensions")

@@ -1,6 +1,7 @@
 package sco.carlukesoftware.composeextensions
 
 import android.app.Activity
+import android.app.Application
 import android.content.Context
 import android.content.ContextWrapper
 import android.widget.Toast
@@ -35,6 +36,22 @@ inline fun <reified T : Activity> Context.findActivityOf(): T? = generateSequenc
  */
 fun Context.requireActivity(): Activity =
     findActivity() ?: throw IllegalStateException("Context $this does not contain an Activity.")
+
+/**
+ * Attempts to find the [Application] instance associated with this [Context].
+ *
+ * @return The [Application] instance, or `null` if it cannot be found (e.g., in unit tests or isolated contexts).
+ */
+fun Context.findApplication(): Application? = applicationContext as? Application
+
+/**
+ * Gets the [Application] instance associated with this [Context].
+ *
+ * @return The [Application] instance.
+ * @throws IllegalStateException if [applicationContext] is not an [Application].
+ */
+fun Context.requireApplication(): Application =
+    findApplication() ?: throw IllegalStateException("Application context not found for $this.")
 
 /**
  * Displays a toast message.
